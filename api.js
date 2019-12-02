@@ -21,7 +21,7 @@ const api = {
             return res.data.reduce((acc,curr)=>{
                 acc += curr.stargazers_count
                 return acc
-            },0)                                                   //check api docs
+            },0)                                                   
 
         })
     }
