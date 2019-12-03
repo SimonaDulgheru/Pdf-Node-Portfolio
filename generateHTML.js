@@ -33,19 +33,17 @@ const colors = {
 function generateHTML(data) {
   console.log(data)
 
-  return `
-  <!DOCTYPE html>
+  return `<!DOCTYPE html>
   <html lang="en">
   
   <head>
       <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"/>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
       <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans|Josefin+Slab|Nanum+Myeongjo&display=swap" rel="stylesheet">
-      <!-- font-family: 'Alegreya Sans', sans-serif;
-      font-family: 'Nanum Myeongjo', serif;
-      font-family: 'Josefin Slab', serif; 
+      
   
       
       <style>
@@ -135,7 +133,7 @@ function generateHTML(data) {
   
 <body>
 <header>
-<img id="front-page-image" src="${data.response.avatar_url}"/>
+<img id="front-page-image" src=${data.response.avatar_url}/>
 </header>
 <div class = "container">
   <div id="topCard">
@@ -160,7 +158,8 @@ function generateHTML(data) {
           <div class = "col-4">    
               <nav>
               ${data.response.location ? `<a class="nav-link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/place/
-              ${data.response.location}"><i class="fas fa-location-arrow"></i> ${data.response.location}</a>` : " "}</nav>
+              ${data.response.location}"><i class="fas fa-location-arrow"></i> ${data.response.location}</a>` : " "}
+              </nav>
           </div>
           <div class = "col-4">  
               <a class="github" style="text-align:center" href="${data.response.html_url}"> <i class="fab fa-github-alt"></i> GitHub</a>

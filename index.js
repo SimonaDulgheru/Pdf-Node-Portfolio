@@ -5,6 +5,7 @@ const fs = require("fs");
 const path = require("path");
 const inquirer = require("inquirer");
 const util = require("util");
+const open = require("open");
 const pdf = require('html-pdf');
 const api = require("./api");
 const generateHTML = require("./generateHTML");
@@ -21,7 +22,7 @@ const questions = [
     {
         type: "input",
         name: "github",
-        message: "Enter your GitHub Username."
+        message: "Enter your GitHub Username:"
     },
 
 ];
@@ -30,12 +31,14 @@ const writeFile = util.promisify(fs.writeFile);
 
 function writetoFile(data, fileName) {
     return fs.writeFileSync(path.join(process.cwd(), fileName), data)
-}
+};
+
+
 
 function init() {
     inquirer.prompt(questions)
         .then(({ github, color }) => {
-            console.log("searching");
+            console.log("Searching");
             api.getUser(github)
                 .then(response =>
                     api.getTotalStars(github)
@@ -51,15 +54,16 @@ function init() {
 
                     await writeFile("index.html", html);
 
-                    var readHtml = fs.readFileSync('index.html', 'utf8');
-                    var options = { 
+                    const readHtml = fs.readFileSync('index.html', 'utf8');
+                    const options = { 
                         format: 'Letter',
                         width: '1000px',
                         height: '900px'
                         };
                      
-                    pdf.create(readHtml, options).toFile('gitprofile.pdf', function(err, res) {
-                      if (err) return console.log(err);
+                    pdf.create(readHtml, options).toFile('GitProfile.pdf', function(err, res) {
+                      if (err) 
+                      return console.log(err);
                       console.log(res); 
                     });
             

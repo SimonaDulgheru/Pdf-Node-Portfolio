@@ -14,9 +14,7 @@ const api = {
     },
     getTotalStars(username){
         return axios
-        .get(`https://api.github.com/users/${username}/repos?client_id=${
-            process.env.CLIENT_ID
-          }&client_secret=${process.env.CLIENT_SECRET}&per_page=100`)
+        .get(`https://api.github.com/users/${username}/repos?client_id=${process.env.CLIENT_ID}&client_secret=${process.env.CLIENT_SECRET}&per_page=100`)
         .then(res =>{
             return res.data.reduce((acc,curr)=>{
                 acc += curr.stargazers_count
@@ -24,7 +22,8 @@ const api = {
             },0)                                                   
 
         })
-    }
+    },
+    
  }
 
  module.exports = api;
