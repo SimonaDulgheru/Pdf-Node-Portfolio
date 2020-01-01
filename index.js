@@ -33,8 +33,6 @@ function writetoFile(data, fileName) {
     return fs.writeFileSync(path.join(process.cwd(), fileName), data)
 };
 
-
-
 function init() {
     inquirer.prompt(questions)
         .then(({ github, color }) => {
@@ -72,7 +70,7 @@ function init() {
                     console.log(error)
                 })
         })
-}
+};
 init();
 
 

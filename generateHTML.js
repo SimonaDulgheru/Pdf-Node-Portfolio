@@ -220,8 +220,8 @@ function generateHTML(data) {
             <header class="photo-header">
               <img  src=${data.response.data.avatar_url} />
                   <h1>Hi!</h1>
-                  <h2>My name is Simona Dulgheru</h2>
-                  <h4>Currently @ Coding Bootcamp</h4>
+                  <h2>My name is ${data.response.data.name}</h2>
+                  <h4>Currently @ ${data.response.data.company ? `${data.response.data.company}` : "Coding Boot Camp"}</h4>
                     <ul class="links-nav">
                         <li class="nav-link"><a href="http://google.com/maps/place/${data.response.data.location}/"target="blank">${data.response.data.location}</a></li>
                         <li class="nav-link"><a href="${data.response.data.html_url}">Github</a></li>
