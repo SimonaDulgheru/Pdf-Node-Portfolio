@@ -1,5 +1,11 @@
 # Pdf-Node-Portfolio
 
+An application that dynamically generates a PDF profile from a GitHub username. The application will be invoked with the following command:
+
+ ## node index.js
+
+The user will be prompted for a favorite color, which will be used as the background color for cards.
+
 Avoid revoking your Git API KEY on your public repositories. Install dotenv in your terminal 
 
 ![Install dotenv](https://user-images.githubusercontent.com/48987979/70140116-e830d100-168b-11ea-8568-33498c360636.PNG)
@@ -24,7 +30,7 @@ Preview
 
 ![Pdf Generator  (0)](https://user-images.githubusercontent.com/48987979/70141214-75752500-168e-11ea-8a7e-6caaf064c9b5.gif)
 
- Go to your command line and run node index.  A PDF will be generated
+ Go to your command line and run node index.  A PDF will be generated.
 
 
 
