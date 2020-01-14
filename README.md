@@ -28,7 +28,7 @@ Git is a version control that keeps track of all of your files. .gitignore stops
 
 Preview 
 
-![Pdf Generator  (0)](https://user-images.githubusercontent.com/48987979/70141214-75752500-168e-11ea-8a7e-6caaf064c9b5.gif)
+![Pdf Generator  (0)](https://user-images.githubusercontent.com/48987979/72345550-f67efd80-36cb-11ea-9315-240eb8bb5376.gif)
 
  Go to your command line and run node index.  A PDF will be generated.
 

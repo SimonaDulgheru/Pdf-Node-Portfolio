@@ -41,7 +41,7 @@ function generateHTML(data) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"/>
-  <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet">
+  // <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet">
   <title>${data.response.data.name}</title>
       <style>
       @page {
@@ -74,29 +74,35 @@ function generateHTML(data) {
      padding-top: 30px;
      }
      h1, h2, h3, h4, h5, h6 {
-    font-family: 'Varela Round', sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
      margin: 0 auto;
      }
      h1 {
      font-size: 3em;
+     
      }
      h2 {
      font-size: 2.5em;
+     
      }
      h3 {
      font-size: 2em;
      padding: 30px;
      margin:20px;
+     
      }
      h4 {
      font-size: 2em;
      
+     
      }
      h5 {
      font-size: 1.3em;
+     
      }
      h6 {
      font-size: 1.2em;
+    
      }
      .photo-header {
      position: relative;
@@ -117,7 +123,7 @@ function generateHTML(data) {
      border-radius: 50%;
      object-fit: cover;
      margin-top: -75px;
-     margin-left:40%;
+     margin-left:42%;
      margin-right:50%;
      border: 6px solid ${colors[data.color].photoBorderColor};
      box-shadow: rgba(0, 0, 0, 0.3) 4px 1px 20px 4px;
